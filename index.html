@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - Ковальов Олег</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle">Переключить тему</button>
+        <script>
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            if (localStorage.getItem('theme') === 'dark') {
+                body.classList.add('dark-theme');
+            }
+            themeToggle.addEventListener('click', () => {
+                body.classList.toggle('dark-theme');
+                if (body.classList.contains('dark-theme')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        </script>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-photo">
+                <div class="photo-caption">
+                    <h1 class="name">КОВАЛЬОВ ОЛЕГ</h1>
+                    <h2 class="age">20 років/frontend developer</h2>
+                </div>
+            </div>
+            
+            <div class="skills">
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>✅ HTML5, CSS3, JAVASCRIPT</li>
+                    <li>✅ АДАПТИВНА ВЕРСТКА</li>
+                    <li>✅ UX/UI: FRAMER MOTION, GSAP</li>
+                    <li>✅ GIT, GITHUB, GITLAB</li>
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>✅ КОМАНДНА РОБОТА ТА КОМУНІКАЦІЯ</li>
+                    <li>✅ ГОТОВНІСТЬ ДО НАВЧАННЯ</li>
+                    <li>✅ УМІННЯ ПРАЦЮВАТИ З ДИЗАЙНЕРАМИ</li>
+                </ul>
+            </div>
+            
+            <!-- <div class="socials">
+                <a href="#" class="button">
+                    <img src="img/icon/socials/Github.svg" alt="GITHUB LOGO"></a>
+                <a href="#" class="button">
+                    <img src="img/icon/socials/Linkedin.svg" alt="LinkedIn LOGO"></a>
+                <a href="#" class="button">
+                    <img src="img/icon/socials/Gitlab.svg" alt="GITLAB LOGO"></a>
+            </div> -->
+        </div>
+    
+        <main class="content">
+            <section class="about">
+                <h2 class="inform">Інформація про мене</h2>
+                <p>Я молодий та амбітний Frontend Developer, 
+                    який нещодавно закінчив університет. Маю міцні знання HTML, CSS, JavaScript та досвід роботи з React.js. 
+                    Швидко навчаюсь, вмію працювати в команді та прагну розвивати свої навички у створенні сучасних веб-застосунків.</p>
+            </section>
+
+            <section class="education">
+                <h2 class="inform">Освіта</h2>
+                <p><strong>Прикарпатський національний університет ім Василя Стефаника</strong></p>
+                <p><strong>Факультет:</strong> Математики та інформатики / Інженерія програмного забезпечення</p>
+                <p><strong>Ступінь:</strong> Бакалавр</p>
+                <p><strong>Роки навчання:</strong> 2021/2025</p>
+            </section>
+
+            <section class="projects">
+                <h2 class="inform">Особисті проекти</h2>
+             <div class="projects-list">
+                <div class="project">
+                    <h3>Пороект курсу Odin</h3>
+                    <p><strong>Опис:</strong>Цей проєкт був виконаний в рамках курсу The Odin Project і
+                     продемонстрував мої навички верстки та створення інтерактивних інтерфейсів.</p>
+                    <p><strong>Технології:</strong> React.js, HTML5, CSS3</p>
+                    <div class="links">    
+                        <a href="https://odin-github-io.vercel.app/" target="_blank">Посилання</a>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <h3>Сайт з рецептами</h3>
+                    <p><strong>Опис:</strong>Створив веб-сайт, присвячений кулінарним рецептам, з простим та 
+                    інтуїтивно зрозумілим інтерфейсом для перегляду та пошуку рецептів.</p>
+                    <p><strong>Технології:</strong> HTML5, CSS3, JavaScript</p>
+                    <div class="links">    
+                        <a href="https://ewegerr.github.io" target="_blank" class="button">Посилання</a>
+                    </div>
+                </div>
+             </div>
+            </section>
+
+            <section class="contact">
+                <h2 class="inform">Контакти</h2>
+                <!-- <p class="inform">Я завжди відкритий для нових можливостей та співпраці. 
+                    Не соромтесь зв'язатися зі мною, якщо у вас є питання або пропозиції.</p> -->
+                <div class="contact-info"> 
+                    <a href="https://surl.li/aiamvx" target="_blank" class="cont">
+                        <img src="img/icon/contacts/Home.svg" alt="Home">
+                        <strong>Адреса: </strong> Набережна ім Василя Стефаника 28
+                    </a>
+                    <a href="tel:+380974911168" class="cont">
+                        <img src="img/icon/contacts/Phone.svg" alt="phone">
+                        <strong>Телефон: </strong>+380974911168
+                    </a>
+                    <a href="mailto:eweger@gmail.com" class="cont">
+                        <img src="img/icon/contacts/Email.svg" alt="email_icon">
+                        <strong>Email: </strong>eweger@gmail.com
+                    </a>
+                
+                <div id="socials">
+                    <!-- <div id="me">Тут ви можете перглянути мої мережі</div> -->
+                    <a href="#" id="button">
+                        <img id="media" src="img/icon/socials/Github.svg" alt="GITHUB LOGO"></a>
+                    <a href="#" id="button">
+                        <img id="media" src="img/icon/socials/Linkedin.svg" alt="LinkedIn LOGO"></a>
+                    <a href="#" id="button">
+                        <img id="media" src="img/icon/socials/Gitlab.svg" alt="GITLAB LOGO"></a>
+                </div>
+            </div>
+            </section>
+       
+        </main>
+    </div>
+</body>
+</html>
